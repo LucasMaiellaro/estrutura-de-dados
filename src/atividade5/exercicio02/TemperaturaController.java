@@ -68,9 +68,7 @@ public class TemperaturaController {
 			 item = item.getProximo();
 		}
 		
-		aux.setProximo(null);
-		
-			
+		aux.setProximo(null);		
 	}
 	
 	public static void removePosicao(int posicao) {
