@@ -61,10 +61,36 @@ public class TemperaturaController {
 		}
 		
 		Temperatura item = primeiroItem;
+		Temperatura aux = null;
 		
-		while (item.getProximo() != null)
-			item = item.getProximo();
+		while (item.getProximo() != null) {
+			 aux = item;
+			 item = item.getProximo();
+		}
+		
+		aux.setProximo(null);
+		
 			
+	}
+	
+	public static void removePosicao(int posicao) {
+		if (estaVazio()) {
+			JOptionPane.showMessageDialog(null, "A lista esta vazia");
+			return;
+		}
+		
+		Temperatura item = primeiroItem;
+		Temperatura aux = item;
+		
+		for (int i = 1; i < posicao - 1; i++) {
+			item = item.getProximo();
+		}
+		
+		for (int i = 1; i <= posicao; i++) {
+			aux = aux.getProximo();
+		}
+		
+		item.setProximo(aux);
 	}
 	
 	public static void apresentarLista() {

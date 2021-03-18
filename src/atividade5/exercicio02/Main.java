@@ -15,9 +15,10 @@ public class Main {
 					+ "\n1 - Verificar se a lista esta vazia"
 					+ "\n2 - Adicionar uma temperatura no inicio da lista"
 					+ "\n3 - Adicionar uma temperatura no final da lista"
-					+ "\n4 - Asicionar uma temperatura em uma posicao especifica da lista"
+					+ "\n4 - Adicionar uma temperatura em uma posicao especifica da lista"
 					+ "\n5 - Remover uma temperatura do inicio da lista"
 					+ "\n6 - Remover uma temperatura do final da lista"
+					+ "\n7 - Remover uma temperatura de uma posicao especifica da lista"
 					+ "\n8 - Apresentar lista"
 					+ "\n0 - Sair"));
 			
@@ -48,6 +49,11 @@ public class Main {
 				
 			case 6:
 				TemperaturaController.removeFinal();
+				break;
+				
+			case 7:
+				posicao = Integer.parseInt(JOptionPane.showInputDialog("Digite a posicao que quer remover"));
+				TemperaturaController.removePosicao(posicao);
 				break;
 			
 			case 8:
