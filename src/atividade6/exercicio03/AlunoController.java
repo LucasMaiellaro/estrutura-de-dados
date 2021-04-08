@@ -61,6 +61,7 @@ public class AlunoController {
 		tamanhoLista++;
 	}
 	
+	//função removeFinal com recursividade
 	public static void removeFinal(Aluno item) {
 		Aluno aux = primeiroItem;
 		
